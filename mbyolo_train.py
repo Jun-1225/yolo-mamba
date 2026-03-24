@@ -50,12 +50,9 @@ if __name__ == '__main__':
         
     elif task == "val":
         # 验证时：必须加载训练好的 .pt 权重！
-        # 如果你传入的 config 是 yaml，程序会报错提醒你
         if not opt.config.endswith('.pt'):
             print("⚠️ 警告: 验证模式下，--config 应该指向你训练好的 best.pt 权重文件，而不是 yaml 文件！")
-            print("例如: --config /root/yolo-mamba/output_dir/mambayolo/weights/best.pt")
-            exit()
-            
+            exit() 
         model = YOLO(opt.config)
         # 验证时通常不需要传 epochs, optimizer 等训练参数
         val_args = {"data": opt.data, "batch": opt.batch_size, "imgsz": opt.imgsz, "device": opt.device}
