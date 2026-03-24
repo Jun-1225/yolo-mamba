@@ -1,0 +1,30 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# COCO 2017 dataset https://cocodataset.org by Microsoft
+# Documentation: https://docs.ultralytics.com/datasets/detect/coco/
+# Example usage: yolo train data=coco.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── coco  ← downloads here (20.1 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /root/autodl-tmp # dataset root dir
+train: coco2/images/train2017 
+val: coco2/images/val2017
+test: coco2/images/val2017  
+
+#Bearing
+#Out of Plane Stiffener
+#Gusset Plate Connection
+#Cover Plate Termination
+# Classes
+names:
+  0: Bearing
+  1: Out of Plane Stiffener
+  2: Gusset Plate Connection
+  3: Cover Plate Termination
+  
+
+# Download script/URL (optional)
+download: |
+ 
